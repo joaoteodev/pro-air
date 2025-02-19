@@ -1,0 +1,68 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+#footer {
+  padding: 3rem 0;
+  background: $gray;
+
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+    .box {
+      strong {
+        text-transform: uppercase;
+        color: rgb(121, 121, 121);
+      }
+
+      .footer-list {
+        margin-top: 1.5rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .list-item {
+          color: rgb(108, 108, 108);
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: rgb(143, 143, 143);
+          }
+        }
+      }
+    }
+  }
+
+  .copy {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgb(143, 143, 143);
+    color: rgb(143, 143, 143);
+    text-align: center;
+
+    strong {
+      font-style: italic;
+      color: #fff;
+      font-family: "Kanit", sans-serif;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    .footer-row {
+      flex-wrap: wrap;
+      gap: 5rem;
+      .box {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

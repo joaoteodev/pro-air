@@ -1,0 +1,50 @@
+@use "sass:color";
+@use "abstracts" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.default-button {
+  text-transform: uppercase;
+  height: 4.6rem;
+  line-height: 4.6rem;
+  padding: 0 2.5rem;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background 0.3s;
+
+  &:hover {
+    background: color.adjust($blue, $lightness: 10%);
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}

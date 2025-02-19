@@ -1,0 +1,161 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+#contacts {
+  padding-top: 10rem;
+
+  .contacts-wrapper {
+    margin-top: 8rem;
+    display: flex;
+    gap: 10rem;
+    .contacts-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      width: 40%;
+
+      * {
+        color: $gray;
+      }
+
+      p {
+        display: flex;
+        font-weight: 300;
+        img {
+          width: 3.2rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .form {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      strong {
+        width: 100%;
+        color: $gray;
+      }
+
+      .field {
+        width: 100%;
+        position: relative;
+
+        label {
+          position: absolute;
+          color: rgb(121, 121, 121);
+          left: 1.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          transition: all 0.3s;
+        }
+
+        &.active {
+          label {
+            top: 22%;
+            font-size: 1rem;
+          }
+
+          input,
+          textarea {
+            outline: 1px solid;
+          }
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          background: $gray;
+          border: none;
+          padding: 2rem 1.5rem 1rem;
+          border-radius: 1rem;
+        }
+
+        &.name,
+        &.email {
+          width: 48%;
+        }
+
+        &.email {
+          margin-left: auto;
+        }
+
+        &.message {
+          height: 15rem;
+          label {
+            top: 3rem;
+          }
+
+          textarea {
+            height: 15rem;
+            resize: none;
+          }
+
+          &.active {
+            label {
+              top: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .form-button {
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 1rem;
+        border: none;
+
+        background: $blue;
+        width: 50%;
+        height: 5rem;
+        font-weight: 700;
+
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: color.adjust($blue, $lightness: 10%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #contacts {
+    .contacts-wrapper {
+      flex-wrap: wrap;
+
+      .contacts-info {
+        width: 100%;
+        text-align: center;
+        p {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #contacts {
+    .contacts-wrapper {
+      .form {
+        .field {
+          &.name,
+          &.email {
+            width: 100%;
+            margin: 0;
+          }
+        }
+
+        .form-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

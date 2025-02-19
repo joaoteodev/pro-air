@@ -1,0 +1,76 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+#services {
+  padding-top: 10rem;
+
+  .services-list {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2.5rem;
+
+    .service-card {
+      background: $gray;
+      width: 49%;
+      border-radius: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3.5rem;
+      gap: 2rem;
+      transition: all 0.3s;
+
+      .card-img {
+        img {
+          width: 50rem;
+          filter: invert(1);
+        }
+      }
+
+      .card-title {
+        color: $blue;
+        margin-bottom: 1.5rem;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #services {
+    .services-list {
+      justify-content: center;
+      .service-card {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #services {
+    .services-list {
+      gap: 4rem;
+      .service-card {
+        width: 100%;
+        flex-wrap: wrap;
+
+        .card-img {
+          img {
+            max-width: 15rem;
+            margin: 0 auto;
+          }
+        }
+
+        .card-content {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

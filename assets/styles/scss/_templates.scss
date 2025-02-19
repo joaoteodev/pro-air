@@ -1,0 +1,69 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+.section-top {
+  text-align: center;
+
+  .section-top-title {
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: $gray;
+    font-family: "Kanit", sans-serif;
+    letter-spacing: 0.5rem;
+  }
+
+  .section-top-subtitle {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    color: $light-gray;
+
+    strong {
+      font-style: italic;
+      color: $gray;
+      font-family: "Kanit", sans-serif;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+
+  .section-top-link {
+    position: relative;
+    color: $blue;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding: 0.5rem;
+
+    &:after {
+      position: absolute;
+      content: "";
+      background: url(../../images/arrow-icon.svg);
+      width: 32px;
+      height: 32px;
+      top: 0.1rem;
+      right: 100%;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      font-weight: 700;
+
+      &:after {
+        right: -3.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .section-top {
+    .section-top-title {
+      letter-spacing: 0;
+      font-size: 4.7rem;
+    }
+  }
+}

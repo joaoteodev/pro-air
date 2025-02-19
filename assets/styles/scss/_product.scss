@@ -1,0 +1,149 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+#main-content {
+  margin-top: 11rem;
+  padding: 0 0 5rem;
+  .product-review {
+    display: flex;
+    align-items: center;
+    padding-top: 10rem;
+
+    .box-left {
+      .product-title {
+        font-size: 6rem;
+        font-style: italic;
+        font-family: "Kanit", sans-serif;
+        color: black;
+        line-height: 6rem;
+        margin-bottom: 3rem;
+      }
+
+      .product-subtitle {
+        color: color.adjust($blue, $lightness: 10%);
+        font-size: 3.5rem;
+        line-height: 1;
+        width: 90%;
+        margin-bottom: 3rem;
+      }
+
+      .product-price {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: $blue;
+        font-weight: 300;
+      }
+
+      .product-buttons {
+        display: flex;
+        gap: 2rem;
+
+        .buy-button {
+          background: $blue;
+          border: none;
+          display: flex;
+          gap: 1.3rem;
+          align-items: center;
+
+          img {
+            width: 2.5rem;
+            margin-top: -0.4rem;
+          }
+
+          &:hover {
+            background: color.adjust($blue, $lightness: 10%);
+          }
+        }
+
+        .about-button {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+          background: $gray;
+
+          img {
+            margin-top: -0.2rem;
+            width: 2.5rem;
+          }
+
+          &:hover {
+            background: color.adjust($gray, $lightness: 10%);
+          }
+        }
+      }
+    }
+
+    .box-right {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  #main-content {
+    .product-review {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .box-left {
+        text-align: center;
+        .product-subtitle {
+          width: 100%;
+        }
+
+        .product-description {
+          width: 75%;
+          margin: 0 auto;
+          font-size: 1.6rem;
+          margin-bottom: 2rem;
+        }
+
+        .product-buttons {
+          justify-content: center;
+        }
+      }
+
+      .box-right {
+        width: 100%;
+        margin-top: 2rem;
+        img {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #main-content {
+    padding-top: 0;
+    padding-bottom: 10rem;
+    .product-review {
+      .box-left {
+        .product-title {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+
+        .product-subtitle {
+          font-size: 3rem;
+        }
+
+        .product-buttons {
+          flex-wrap: wrap;
+          margin-top: 2rem;
+
+          .default-button {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+      }
+
+      .box-right img {
+        width: 100%;
+      }
+    }
+  }
+}
