@@ -25,38 +25,14 @@
       <div class="container">
         <nav class="header-nav">
           <div class="box-logo">
-            <h1 class="logo-title"><span>PRO</span>AR</h1>
+            <a href="/" class="item-link active"
+              ><h1 class="logo-title"><span>PRO</span>AR</h1></a
+            >
           </div>
 
           <ul class="header-menu">
             <li class="menu-item">
-              <a href="#home" class="item-link active">Home</a>
-            </li>
-            <li class="menu-item">
-              <a href="#products" class="item-link">Serviços</a>
-            </li>
-            <li class="menu-item">
-              <a href="#services" class="item-link">Benefícios</a>
-            </li>
-            <li class="menu-item">
-              <a href="#members" class="item-link">Members</a>
-            </li>
-            <li class="menu-item">
-              <a href="#contacts" class="item-link">Contato</a>
-            </li>
-            <li class="menu-item signin-button">
-              <a href="#" class="item-link">Login</a>
-            </li>
-          </ul>
-
-          <div class="toggle-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-          <ul class="header-menu-mobile">
-            <li class="menu-item">
-              <a href="#home" class="item-link">Home</a>
+              <a href="/" class="item-link active">Home</a>
             </li>
             <li class="menu-item">
               <a href="#products" class="item-link">Serviços</a>
@@ -71,7 +47,38 @@
               <a href="#contacts" class="item-link">Contato</a>
             </li>
             <li class="menu-item signin-button">
-              <a href="#" class="item-link">Sign In</a>
+              <a href="/login.html" class="item-link">Login</a>
+              <!-- <div class="login">
+                <input class="username" type="text" placeholder="Usuário" />
+                <input class="password" type="password" placeholder="Senha" />
+                <button class="login-button">Entrar</button>
+              </div> -->
+            </li>
+          </ul>
+
+          <div class="toggle-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul class="header-menu-mobile">
+            <li class="menu-item">
+              <a href="/" class="item-link active">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="#products" class="item-link">Serviços</a>
+            </li>
+            <li class="menu-item">
+              <a href="#services" class="item-link">Benefícios</a>
+            </li>
+            <li class="menu-item">
+              <a href="#members" class="item-link">Clientes</a>
+            </li>
+            <li class="menu-item">
+              <a href="#contacts" class="item-link">Contato</a>
+            </li>
+            <li class="menu-item signin-button">
+              <a href="/login.html" class="item-link">Login</a>
             </li>
           </ul>
         </nav>
@@ -82,23 +89,23 @@
       <div class="container">
         <section id="home" class="product-review">
           <div class="box-left">
-            <h2 class="product-title">PRO AR - REFRIGERAÇÃO</h2>
+            <h2 class="product-title">PRO AR <br />REFRIGERAÇÃO</h2>
             <h3 class="product-subtitle">
               Conforto e frescor em qualquer estação!
             </h3>
             <p class="product-price">Faça seu orçamento</p>
             <div class="product-buttons">
-              <button class="buy-button default-button">
+              <a href="/produtos.html" class="buy-button default-button">
                 <img src="./assets/images/cart-icon.svg" alt="Cart icon" />
                 Comece já
-              </button>
-              <button class="about-button default-button">
+              </a>
+              <a href="/produto.html" class="about-button default-button">
                 <img
                   src="./assets/images/info-icon.svg"
                   alt="Information icon"
                 />
                 Saiba mais
-              </button>
+              </a>
             </div>
           </div>
           <div class="box-right">
@@ -122,7 +129,7 @@
             <div class="product-item">
               <img
                 src="./assets/images/instalacao.jpg"
-                alt="Instalação ar condicionado"
+                alt="Instalação Ar-condicionado"
               />
               <h3>Instalação</h3>
             </div>
@@ -304,7 +311,22 @@
         </section>
       </div>
     </main>
-
+    <div id="whatsapp">
+      <a
+        href="https://api.whatsapp.com/send?phone=5531999999999&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Pro-ar."
+        target="_blank"
+        class="whatsapp-link"
+      >
+        <p class="whatsapp-text">Fale conosco pelo WhatsApp</p>
+        <div class="img">
+          <img
+            src="./assets/images/wpp-icon.png"
+            alt="WhatsApp"
+            class="whatsapp-icon"
+          />
+        </div>
+      </a>
+    </div>
     <footer id="footer">
       <div class="container">
         <div class="footer-row">
@@ -340,7 +362,7 @@
           <div class="box box4">
             <strong>Sobre</strong>
             <ul class="footer-list">
-              <li class="list-item">FAQs</li>
+              <li class="list-item"><a href="/faq.html">FAQs</a></li>
               <li class="list-item">Termos de uso</li>
               <li class="list-item">Política de privacidade</li>
             </ul>

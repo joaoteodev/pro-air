@@ -1,0 +1,72 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+#whatsapp {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 15;
+  display: block;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  .whatsapp-link {
+    text-decoration: none;
+  }
+
+  .whatsapp-text {
+    background: $verde;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(black, 0.2);
+    transition: 0.3s;
+    position: absolute;
+    width: max-content;
+    right: 0;
+    top: -100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $verde;
+      width: 20px;
+      height: 20px;
+      bottom: -0.5rem;
+      right: 18px;
+      transform: rotate(45deg);
+      border-radius: 0.5rem;
+      transition: 0.3s;
+      mix-blend-mode: lighten;
+    }
+  }
+
+  .img {
+    background: $verde;
+    padding: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(black, 0.2);
+    transition: 0.3s;
+    width: fit-content;
+
+    .whatsapp-icon {
+      width: 2.8rem;
+      transform: translate(1px, -1px);
+      filter: brightness(50);
+    }
+  }
+
+  &:hover {
+    .whatsapp-text,
+    .img {
+      background: color.adjust($verde, $lightness: 10%);
+    }
+
+    .whatsapp-text:before {
+      background: color.adjust($verde, $lightness: 10%);
+    }
+  }
+}

@@ -3,7 +3,7 @@
 
 #main-content {
   margin-top: 11rem;
-  padding: 0 0 5rem;
+  padding: 0 0 10rem;
   .product-review {
     display: flex;
     align-items: center;
@@ -44,6 +44,7 @@
           display: flex;
           gap: 1.3rem;
           align-items: center;
+          text-decoration: none;
 
           img {
             width: 2.5rem;
@@ -60,6 +61,7 @@
           align-items: center;
           gap: 0.7rem;
           background: $gray;
+          text-decoration: none;
 
           img {
             margin-top: -0.2rem;
@@ -117,8 +119,6 @@
 
 @media (max-width: 600px) {
   #main-content {
-    padding-top: 0;
-    padding-bottom: 10rem;
     .product-review {
       .box-left {
         .product-title {

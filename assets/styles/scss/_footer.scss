@@ -13,7 +13,7 @@
     .box {
       strong {
         text-transform: uppercase;
-        color: rgb(121, 121, 121);
+        color: $blue;
       }
 
       .footer-list {
@@ -24,12 +24,21 @@
         gap: 1rem;
 
         .list-item {
-          color: rgb(108, 108, 108);
+          color: #fff;
           cursor: pointer;
           transition: all 0.3s;
 
+          a {
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: $blue;
+            }
+          }
+
           &:hover {
-            color: rgb(143, 143, 143);
+            color: $blue;
           }
         }
       }
@@ -39,7 +48,7 @@
   .copy {
     padding-top: 1.5rem;
     border-top: 1px solid rgb(143, 143, 143);
-    color: rgb(143, 143, 143);
+    color: #fff;
     text-align: center;
 
     strong {

@@ -1,0 +1,78 @@
+@use "abstracts" as *;
+@use "sass:color";
+
+.login {
+  background: color.adjust($blue, $lightness: -5%);
+  padding: 2.5rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .logo-title {
+    font-family: "Kanit", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: 5rem;
+
+    span {
+      color: $black;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    width: 100%;
+  }
+
+  input {
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    color: $black;
+
+    &::placeholder {
+      color: $black;
+    }
+
+    & + input {
+      margin-top: 1rem;
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: $verde;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background: color.adjust($verde, $lightness: -10%);
+    }
+
+    &.back {
+      background: $black;
+      color: #fff;
+      margin-top: 6rem;
+
+      &:hover {
+        background: color.adjust($black, $lightness: 15%);
+      }
+    }
+  }
+}
